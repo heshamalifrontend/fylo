@@ -1,0 +1,354 @@
+@mixin phone{
+    @media (max-width:800px){
+        @content
+    }
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    color: white;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: rgb(28, 36, 49);
+    box-sizing: border-box;
+}
+.container{
+    margin:auto;
+    width: 90%;
+    padding: 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include phone{
+            flex-direction: column;
+        }
+        ul{
+            display: flex;
+            @include phone{
+                margin-top: 20px;
+            }
+            li{
+                transition: all 1s;
+                border: 1px solid #1abc9c;
+                padding: 10px;
+                border-radius:5px;
+                &:hover{
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-size: 18px;
+                    background-color: #1abc9c;
+                }
+                &:not(:last-child){
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+}
+.landing{
+    position: relative;
+    .container{
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 500px;
+        margin: auto;
+        @include phone{
+            width: 300px;
+        }
+        .landing__pic{
+            width: 100%;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+            }
+        }
+        .landing__info{
+            line-height: 35px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            h1{
+                @include phone{
+                    font-size: 20px;
+                }
+            }
+        }
+        .landing__btn{
+            padding: 10px 30px;
+            outline: none;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px 40px;
+            cursor: pointer;
+            transition: all 0.5s;
+            background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+            &:hover{
+                background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
+            }
+        }
+        .landing__pragraph{
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .cerve{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -9999;
+        left: 0;
+        transform: translateY(5px);
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.dark{
+    background-color: hsl(218deg, 28%, 13%);
+    padding-bottom: 350px;
+    position: relative;
+    .service{
+        .container{
+            padding-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            .box{
+                width: 350px;
+                text-align: center;
+                margin-bottom: 20px;
+                padding: 10px;
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .about{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            .about__pic{
+                width: 40%;
+                @include phone{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+            .about__info{
+                width: 40%;
+                @include phone{
+                    width: 100%;
+                }
+                p{
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+                a{
+                    color:#1abc9c;
+                    transition: all 0.5s;
+                    &:hover{
+                        margin-right: 10px;
+                        text-decoration: underline;
+                    }
+                }
+                img{
+                    width: 30px;
+                    transform: translateY(10px);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .users{
+        .container{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+            .card{
+                padding: 30px;
+                box-shadow: 13px 6px 18px black;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 1s;
+                &:hover{
+                    transform: translateY(-10px);
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+                .user{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius:50%;
+                        margin-right: 10px;
+                    }
+                    .user__info{
+                        transform: translateY(10px);
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .cart{
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: hsl(218deg, 28%, 13%);
+        box-shadow: 13px 6px 18px black;
+        text-align: center;
+        line-height: 30px;
+        @include phone{
+            width: 350px;
+        }
+        .container{
+            h1{
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            p{
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+            form{
+                input{
+                    width: 40%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    outline: none;
+                    border: none;
+                    color:black;
+                }
+                .btn{
+                    padding: 10px 30px;
+                    outline: none;
+                    margin-top: 10px;
+                    border: none;
+                    border-radius: 10px 40px;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+                    &:hover{
+                        background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    padding: 20px;
+    background-color: hsl(216, 53%, 9%);
+    padding-top: 180px;
+    padding-bottom: 100px;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include phone{
+            flex-direction: column;
+        }
+        section{
+            padding: 10px;
+            margin-right: 30px;
+            text-align: center;
+            &.location{
+                width: 40%;
+                @include phone{
+                    width: 100%;
+                }
+                img{
+                    margin-bottom: 10px;
+                }
+            }
+            &.phone{
+                width: 15%;
+                @include phone{
+                    width: 100%;
+                }
+                line-height: 25px;
+            }
+            &.footer__links{
+                width: 10%;
+                @include phone{
+                    width: 100%;
+                }
+                ul{
+                    li{
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &.footer__links2{
+                width: 10%;
+                @include phone{
+                    width: 100%;
+                }
+                ul{
+                    li{
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &.brands__icon{
+                width: 13%;
+                @include phone{
+                    width: 100%;
+                }
+                .fa-brands{
+                    border: 1px solid black;
+                    font-size: 30px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

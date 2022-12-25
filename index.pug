@@ -1,0 +1,133 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet",
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css",
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==",
+        crossorigin="anonymous",
+        referrerpolicy="no-referrer")
+        title Document
+    body
+        header.header
+            .container
+                .ul__logo 
+                    img(src="images/logo.svg", alt="alt")
+                .ul__links
+                    - var links = ["product","teams","sign up"]
+                    ul 
+                        each link in links 
+                            li=link
+        .landing 
+            .container
+                .landing__pic
+                    img(src="images/illustration-intro.png", alt="")
+                .landing__info 
+                    h1 all your files in a secure
+                    h1 location accessible anywhere 
+                .landing__pragraph 
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore non veritatis illo vel nisi delectus explicabo architecto doloribus dolores consectetur.
+                button.landing__btn.btn get started
+            .cerve 
+                img(src="images/bg-curvy-desktop.svg", alt="alt")
+        .dark 
+            .service 
+                .container 
+                    .box
+                        img(src="images/icon-access-anywhere.svg", alt="alt")
+                        h2 Access yout files from anywhere
+                        p The ability to use your smartphone, tablet or computer to access your account means your files follow you everywhere 
+                    .box
+                        img(src="images/icon-any-file.svg", alt="alt")
+                        h2 Security you can trust
+                        p 2-factor authentication user-cntrolled encryption are just couple of the security features we allow to help secure your files
+                    .box
+                        img(src="images/icon-collaboration.svg", alt="alt")
+                        h2 Real time collaboration
+                        p Securely share files and folders with friends, family and collegues for live collaboration. No email attacments required
+                    .box
+                        img(src="images/icon-security.svg", alt="alt")
+                        h2 Store any type of file
+                        p Whether you're sharing holidays photos or work documents. Fylo has you covered allowing for allfile types to be securely stored and shared
+            .about
+                .container
+                    .about__pic 
+                        img(src="images/illustration-stay-productive.png", alt="alt")
+                    .about__info 
+                        h1 stay productive,
+                        h1 wherever you are 
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        a(href="#") see out fylo work 
+                        img(src="images/icon-arrow.svg", alt="")
+            .users 
+                .container 
+                    .card
+                        p Fylo has increased our team productivity by a order of magnitude. Since making the switch our team has beconme a well oiled collaborative machine
+                        .user 
+                            img(src="images/profile-1.jpg", alt="")
+                            .user__info 
+                                h3 satish patel 
+                                p founder and CEO, huddle
+                    .card
+                        p Fylo has increased our team productivity by a order of magnitude. Since making the switch our team has beconme a well oiled collaborative machine
+                        .user 
+                            img(src="images/profile-2.jpg", alt="")
+                            .user__info 
+                                h3 bruce mckenzie
+                                p founder and CEO, huddle
+                    .card
+                        p Fylo has increased our team productivity by a order of magnitude. Since making the switch our team has beconme a well oiled collaborative machine
+                        .user 
+                            img(src="images/profile-3.jpg", alt="")
+                            .user__info 
+                                h3 lva boyd 
+                                p founder and CEO, huddle
+            .cart 
+                .container 
+                    h1 get early access today 
+                    p it only takes a minute to sign up and our free tier is very generous. if you have any questions, our support ia ready to help you 
+                    form(action="")
+                        input(type="email", name="", placeholder="email@example.com")
+                        button.btn get started for free
+
+        .footer
+            .container
+                section.location
+                    img(src="images/logo.svg", alt="alt")
+                    .footer__location 
+                        i 
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime facilis exercitationem beatae totam iste distinctio sit corporis doloremque error sunt?
+                section.phone
+                    .article1
+                        i 
+                        p +1-234-456-7801
+                    .article2
+                        i 
+                        p example@fylo.com
+                section.footer__links
+                    ul 
+                        li about us 
+                        li jobs
+                        li press
+                        li blog
+                section.footer__links2
+                    ul
+                        li contact
+                        li us
+                        li terms
+                        li privacy
+                section.brands_icon
+                    |
+                    |
+                    i.fa-brands.fa-facebook-f
+                    |
+                    |
+                    i.fa-brands.fa-twitter
+                    |
+                    |
+                    i.fa-brands.fa-instagram
+        script(src="main.js") 
